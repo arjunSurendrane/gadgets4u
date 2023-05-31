@@ -1,0 +1,985 @@
+{{#if admin}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title> Admin </title>
+
+  <!-- Custom fonts for this template-->
+  <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Admin</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/dashboard">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/banner">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Banner</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/product">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Product</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/category">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Category</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/user">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Users</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/order">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Pending Orders</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/deliveredProduct">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span> Orders</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/returnProduct">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Return Orders </span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/sales?year=2022&month=00&day=00">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Sales</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/coupon">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Coupon</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/offer/product">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Product Offer </span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/offer/category">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Category Offer </span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/logout">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Logout </span></a>
+      </li>
+
+
+
+
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+
+        {{{body}}}
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Your Website 2021</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+
+      </div>
+      <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    {{!--
+    <script src="/vendor/jquery/jquery.min.js"></script> --}}
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/js/sb-admin-2.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+{{else if invoice}}
+
+{{{body}}}
+
+
+{{else}}
+<html lang="zxx">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SHOP CIRCUIT - Shop your favorite Gadget</title>
+
+  <!-- ::::::::::::::Favicon icon::::::::::::::-->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/png" />
+
+  <!-- ::::::::::::::All CSS Files here :::::::::::::: -->
+
+
+  <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+  <link rel="stylesheet" href="/css/vendor/vendor.min.css" />
+  <link rel="stylesheet" href="/css/plugins/plugins.min.css" />
+  <link rel="stylesheet" href="/css/style.min.css" />
+  <style>
+    .suggetion {
+      position: absolute;
+      top: 61%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      color: #fff;
+      background: rgba(0, 0, 0, 0);
+      font-size: 21px;
+      font-weight: 300;
+      text-align: center;
+      border: 0;
+      margin: 0 auto;
+      margin-top: -51px;
+      padding-left: 30px;
+      padding-right: 30px;
+      outline: 0;
+      margin-top: 0.5;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Start Header Area -->
+  <header class="header-section d-none d-xl-block">
+    <div class="header-wrapper">
+      <div class="header-bottom header-bottom-color--golden section-fluid sticky-header sticky-color--golden">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 d-flex align-items-center justify-content-between">
+              <!-- Start Header Logo -->
+              <div class="header-logo">
+                <div class="logo">
+                  <a href="/"><img src="/images/shopcircuitLogo.png" alt="" /></a>
+                </div>
+              </div>
+              <!-- End Header Logo -->
+
+              <!-- Start Header Main Menu -->
+              <div class="main-menu menu-color--black menu-hover-color--golden">
+                <nav>
+                  <ul>
+                    <li class="has-dropdown">
+                      <a class="active main-menu-link" href="/">Home
+                      </a>
+
+                    </li>
+                    {{#each category}}
+                    <li class="has-dropdown">
+                      <a class="active main-menu-link" href="/search/{{_id}}">{{categoryName}}
+                      </a>
+
+                    </li>
+                    {{/each}}
+
+
+
+                  </ul>
+                </nav>
+              </div>
+              <!-- End Header Main Menu Start -->
+              <div>
+                <ul>
+                  {{#if user}}
+                  <li>
+                    <a href="/profile"><strong> Hey {{user.name}}</strong></a>
+                  </li>
+                  {{/if}}
+                </ul>
+              </div>
+
+              <!-- Start Header Action Link -->
+              <div class="d-flex align-item-center">
+                <ul class="header-action-link action-color--black action-hover-color--golden w-100%">
+
+                  <li class="d-flex align-item-center mr-5">
+                    {{#if user}}
+                    <a href="/profile">
+                      <i class="icon-user"></i>
+
+
+                    </a>
+                    {{else}}
+                    <a href="/login">
+                      <i class="icon-user"></i>
+
+
+                    </a>
+                    {{/if}}
+                  </li>
+                  <li>
+                    <a href="/cart/{{user._id}}">
+                      <i class="icon-bag"></i>
+
+                      <span class="item-count" id="cartLength">0</span>
+
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/whishlist">
+                      <i class="icon-heart"></i>
+
+                      <span class="item-count" id="whishlistLength">0</span>
+
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/wallet">
+                      <i class="icon-wallet"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#search">
+                      <i class="icon-magnifier"></i>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+              <!-- End Header Action Link -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Start Header Area -->
+
+  <!-- Start Mobile Header -->
+  <div class="mobile-header mobile-header-bg-color--golden section-fluid d-lg-block d-xl-none">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex align-items-center justify-content-between">
+          <!-- Start Mobile Left Side -->
+          <div class="mobile-header-left">
+            <ul class="mobile-menu-logo">
+              <li>
+                <a href="index.html">
+                  <div class="logo">
+                    <a href="/"><img src="/images/shopcircuitLogo.png" alt="" /></a>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- End Mobile Left Side -->
+
+          <!-- Start Mobile Right Side -->
+          <div class="mobile-right-side">
+            <ul class="header-action-link action-color--black action-hover-color--golden">
+              <li>
+                <a href="#search">
+                  <i class="icon-magnifier"></i>
+                </a>
+              </li>
+              <li>
+                <a href="/whishlist" class="offcanvas-toggle">
+                  <i class="icon-heart"></i>
+                </a>
+              </li>
+              <li>
+                <a href="/cart/{{user._id}}">
+                  <i class="icon-bag"></i>
+
+                </a>
+              </li>
+              <li>
+                <a href="#mobile-menu-offcanvas" class="offcanvas-toggle offside-menu">
+                  <i class="icon-menu"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- End Mobile Right Side -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Mobile Header -->
+
+  <!--  Start Offcanvas Mobile Menu Section -->
+  <div id="mobile-menu-offcanvas" class="offcanvas offcanvas-rightside offcanvas-mobile-menu-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+      <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div>
+    <!-- End Offcanvas Header -->
+    <!-- Start Offcanvas Mobile Menu Wrapper -->
+    <div class="offcanvas-mobile-menu-wrapper">
+      <!-- Start Mobile Menu  -->
+      <div class="mobile-menu-bottom">
+        <!-- Start Mobile Menu Nav -->
+        <div class="offcanvas-menu">
+          <ul>
+            <li>
+              {{#if user}}
+              <a href="/profile"><span>Profile</span></a>
+              {{else}}
+              <a href="/login"><span>Login</span></a>
+              {{/if}}
+            </li>
+            <li>
+              <a href="/"><span>Home</span></a>
+            </li>
+
+            {{#each category}}
+            <li class="has-dropdown">
+              <a class="active main-menu-link" href="/search/{{_id}}">{{categoryName}}
+              </a>
+
+            </li>
+            {{/each}}
+
+
+          </ul>
+        </div>
+        <!-- End Mobile Menu Nav -->
+      </div>
+      <!-- End Mobile Menu -->
+
+      <!-- Start Mobile contact Info -->
+      <div class="mobile-contact-info">
+
+
+        <address class="address">
+          <span>Address: Shopping circuit.</span>
+          <span>Call Us: 0123456789, 0123456789</span>
+          <span>Email: shoppingCircuit@online.com</span>
+        </address>
+
+        <ul class="social-link">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+
+        <ul class="user-link">
+          <li> <a href="/whishlist">
+              <i class="icon-heart"></i>
+            </a></li>
+          <li><a href="/cart/{{user._id}}">Cart</a></li>
+          <li><a href="/cart">Checkout</a></li>
+        </ul>
+      </div>
+      <!-- End Mobile contact Info -->
+
+    </div>
+    <!-- End Offcanvas Mobile Menu Wrapper -->
+  </div>
+  <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+
+  <!-- Start Offcanvas Mobile Menu Section -->
+  <div id="offcanvas-about" class="offcanvas offcanvas-rightside offcanvas-mobile-about-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+      <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div>
+    <!-- End Offcanvas Header -->
+    <!-- Start Offcanvas Mobile Menu Wrapper -->
+    <!-- Start Mobile contact Info -->
+    <div class="mobile-contact-info">
+
+
+      <address class="address">
+        <span>Address: Shoppin circuit, kochi.</span>
+        <span>Call Us: 0123456789, 0123456789</span>
+        <span>Email: shoppingCircuit@online.com</span>
+      </address>
+
+      <ul class="social-link">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+
+      <ul class="user-link">
+        <li><a href="/whishlist">Wishlist</a></li>
+        <li><a href="/cart">Cart</a></li>
+        <li><a href="/cart">Checkout</a></li>
+      </ul>
+    </div>
+    <!-- End Mobile contact Info -->
+  </div>
+  <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+
+  <!-- Start Offcanvas Addcart Section -->
+  <div id="offcanvas-add-cart" class="offcanvas offcanvas-rightside offcanvas-add-cart-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+      <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div>
+    <!-- End Offcanvas Header -->
+
+    <!-- Start  Offcanvas Addcart Wrapper -->
+    <div class="offcanvas-add-cart-wrapper">
+      <h4 class="offcanvas-title">Shopping Cart</h4>
+      <ul class="offcanvas-cart">
+        <li class="offcanvas-cart-item-single">
+          <div class="offcanvas-cart-item-block">
+            <a href="#" class="offcanvas-cart-item-image-link">
+              <img src="/images/product/default/home-1/default-1.jpg" alt="" class="offcanvas-cart-image" />
+            </a>
+            <div class="offcanvas-cart-item-content">
+              <a href="#" class="offcanvas-cart-item-link">Car Wheel</a>
+              <div class="offcanvas-cart-item-details">
+                <span class="offcanvas-cart-item-details-quantity">1 x
+                </span>
+                <span class="offcanvas-cart-item-details-price">$49.00</span>
+              </div>
+            </div>
+          </div>
+          <div class="offcanvas-cart-item-delete text-right">
+            <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+          </div>
+        </li>
+        <li class="offcanvas-cart-item-single">
+          <div class="offcanvas-cart-item-block">
+            <a href="#" class="offcanvas-cart-item-image-link">
+              <img src="/images/product/default/home-2/default-1.jpg" alt="" class="offcanvas-cart-image" />
+            </a>
+            <div class="offcanvas-cart-item-content">
+              <a href="#" class="offcanvas-cart-item-link">Car Vails</a>
+              <div class="offcanvas-cart-item-details">
+                <span class="offcanvas-cart-item-details-quantity">3 x
+                </span>
+                <span class="offcanvas-cart-item-details-price">$500.00</span>
+              </div>
+            </div>
+          </div>
+          <div class="offcanvas-cart-item-delete text-right">
+            <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+          </div>
+        </li>
+        <li class="offcanvas-cart-item-single">
+          <div class="offcanvas-cart-item-block">
+            <a href="#" class="offcanvas-cart-item-image-link">
+              <img src="/images/product/default/home-3/default-1.jpg" alt="" class="offcanvas-cart-image" />
+            </a>
+            <div class="offcanvas-cart-item-content">
+              <a href="#" class="offcanvas-cart-item-link">Shock Absorber</a>
+              <div class="offcanvas-cart-item-details">
+                <span class="offcanvas-cart-item-details-quantity">1 x
+                </span>
+                <span class="offcanvas-cart-item-details-price">$350.00</span>
+              </div>
+            </div>
+          </div>
+          <div class="offcanvas-cart-item-delete text-right">
+            <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+          </div>
+        </li>
+      </ul>
+      <div class="offcanvas-cart-total-price">
+        <span class="offcanvas-cart-total-price-text">Subtotal:</span>
+        <span class="offcanvas-cart-total-price-value">$170.00</span>
+      </div>
+      <ul class="offcanvas-cart-action-button">
+        <li><a href="cart.html" class="btn btn-block btn-golden">View Cart</a></li>
+        <li><a href="compare.html" class="btn btn-block btn-golden mt-5">Checkout</a></li>
+      </ul>
+    </div>
+    <!-- End  Offcanvas Addcart Wrapper -->
+
+
+  </div>
+  <!-- End  Offcanvas Addcart Section -->
+
+
+
+  <!-- Start Offcanvas Search Bar Section -->
+  <div id="search" class="search-modal">
+    <button type="button" class="close">×</button>
+    <form action="/listProduct" method="post">
+
+      <input type="search" placeholder="type keyword(s) here" id="searchData" name="productName" />
+      <button type="submit" class="btn btn-lg btn-golden">Search</button>
+    </form>
+    <section class="suggetion d-none">
+      <input type="text" class="text-white" id="suggetion" onclick="useThis(value)" readonly>
+      <hr>
+
+    </section>
+
+
+
+
+  </div>
+  <!-- End Offcanvas Search Bar Section -->
+
+  <!-- Offcanvas Overlay -->
+
+  {{{body}}}
+  {{! Start Footer Section }}
+  <footer class="footer-section footer-bg">
+    <div class="footer-wrapper">
+
+
+      <!-- Start Footer Center -->
+      <div class="footer-center">
+        <div class="container">
+          <div class="row mb-n6">
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-6">
+              <div class="footer-social" data-aos="fade-up" data-aos-delay="0">
+                <h4 class="title">FOLLOW US</h4>
+                <ul class="footer-social-link">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-7 col-lg-6 col-md-6 mb-6">
+              <div class="footer-newsletter" data-aos="fade-up" data-aos-delay="200">
+                <h4 class="title">DON'T MISS OUT ON THE LATEST</h4>
+                <div class="form-newsletter">
+                  <form action="#" method="post">
+                    <div class="form-fild-newsletter-single-item input-color--golden">
+                      <input type="email" placeholder="Your email address..." required />
+                      <button type="submit">SUBSCRIBE!</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Start Footer Center -->
+
+      <!-- Start Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row justify-content-between align-items-center align-items-center flex-column flex-md-row mb-n6">
+            <div class="col-auto mb-6">
+              <div class="footer-copyright">
+                <p class="copyright-text">&copy; <span id="year"></span>
+                  <a href="/">Shop circuit</a>. Made with
+                  <i class="fa fa-heart text-danger"></i>
+                  by
+                  <a href="/" target="_blank">Shop circuit</a>
+                </p>
+
+              </div>
+            </div>
+            <div class="col-auto mb-6">
+              <div class="footer-payment">
+                <div class="image">
+                  <img src="/images/company-logo/payment.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Start Footer Bottom -->
+    </div>
+  </footer>
+  <!-- End Footer Section -->
+
+  <!-- material-scrolltop button -->
+  <button class="material-scrolltop" type="button"></button>
+
+  <!-- Start Modal Add cart -->
+  {{#with cart}}
+  <div class="modal fade" id="modalAddcart" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col text-right">
+                <button type="button" class="close modal-close" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                    <i class="fa fa-times"></i></span>
+                </button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-7">
+                <div class="row">
+                  {{!-- <div class="col-md-4">
+                    <div class="modal-add-cart-product-img">
+                      <img class="img-fluid" src="/images/product/default/home-1/default-1.jpg" alt="" />
+                    </div>
+                  </div> --}}
+                  <div class="col-md-8">
+                    <div class="modal-add-cart-info"><i class="fa fa-check-square"></i>Added to cart successfully!</div>
+                    <div class="modal-add-cart-product-cart-buttons">
+                      <a href="/cart/{{user._id}}">View Cart</a>
+                      {{!-- <a href="checkout.html">Checkout</a> --}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 modal-border">
+                <ul class="modal-add-cart-product-shipping-info">
+                  <li>
+                    <strong><i class="icon-shopping-cart"></i>
+
+                      There Are {{cartItems.length}} Items In Your Cart.</strong>
+                  </li>
+                  {{!-- <li>
+                    <strong>TOTAL PRICE: </strong>
+                    <span>{{cartItems.[].price}}</span>
+                  </li> --}}
+                  <li class="modal-continue-button"><a href="/" data-bs-dismiss="modal">CONTINUE SHOPPING</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/with}}
+  <!-- End Modal Add cart -->
+
+
+
+
+
+
+
+
+  <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+    async function count() {
+      const cart = await axios({
+        method: 'get',
+        url: '/cartLength'
+      })
+      console.log(cart)
+      if (!cart.data.cart) {
+
+      }
+      else {
+        document.getElementById('cartLength').innerHTML = cart.data.cart.cartItems.length
+      }
+      const whishlist = await axios({
+        method: 'get',
+        url: '/whishlistLength'
+      })
+      console.log(whishlist)
+      if (!whishlist.data.whishlist) {
+
+      } else {
+        document.getElementById('whishlistLength').innerHTML = whishlist.data.whishlist.items.length
+      }
+
+    }
+
+    count();
+
+    // window.addEventListener('click', count)
+
+
+    function debounce(fn, delay) {
+      let timeOutId
+      return function (...args) {
+        if (timeOutId) {
+          clearTimeout(timeOutId)
+        }
+        timeOutId = setTimeout(() => {
+          fn(...args);
+        }, delay)
+      }
+    }
+    const searchData = document.getElementById('searchData')
+    searchData.addEventListener('keyup', debounce(async () => {
+      let e = document.getElementById('searchData').value;
+      if (!e) {
+        document.querySelector('.suggetion').classList.add('d-none')
+      } else {
+        document.querySelector('.suggetion').classList.remove('d-none')
+      }
+      const res = await axios({
+        method: 'post',
+        url: '/search',
+        data: {
+          e
+        }
+      })
+      console.log(res)
+      if (res.data.result.length <= 0) {
+        document.getElementById('suggetion').value = 'this product not found '
+      }
+      res.data.result.forEach(e => {
+        console.log(document.getElementById('suggetion').value)
+        document.getElementById('suggetion').value = e.productName
+        console.log(e.productName)
+      })
+    }, 250));
+
+    function useThis(e) {
+      document.getElementById('searchData').value = e
+    }
+
+
+
+
+
+
+  </script>
+
+  <script src="/js/vendor/vendor.min.js"></script>
+  <script src="/js/plugins/plugins.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+    integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+
+
+  <script>
+
+    const loginForm = document.getElementById('form')
+    const signUpForm = document.getElementById('form-signup')
+
+
+
+    if (signUpForm) {
+      $(document).ready(function () {
+        $("#form-signup").validate({
+          rules: {
+            email: {
+              email: true,
+              required: true
+            },
+            password: {
+              minlength: 4
+            },
+            name: {
+              required: true,
+            },
+            mob: {
+              required: true
+            }
+          },
+          submitHandler: function (form, e) {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            if (password == confirmPassword) {
+              signup();
+            }
+          }
+        })
+      })
+
+
+
+      async function signup() {
+        try {
+          console.log(document.getElementById('email').value)
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const mob = document.getElementById('mob').value;
+          const password = document.getElementById('password').value;
+          const confirmPassword = document.getElementById('confirmPassword').value;
+          // const Pincode = document.getElementById('Pincode').value;
+          // const city = document.getElementById('city').value;
+          // const Locality = document.getElementById('Locality').value;
+          // const BuildingName = document.getElementById('BuildingName_signup').value;
+          // const Landmark = document.getElementById('Landmark_signup').value;
+          // const AddressType = document.getElementById('AddressType').value;
+
+          console.log(name, email, mob, password, confirmPassword)
+
+
+          const res = await axios({
+            method: 'POST',
+            url: '/signup',
+            data: {
+              name,
+              email,
+              mob,
+              password,
+              confirmPassword
+
+            }
+          })
+          if (res.data.status == 'success') {
+            window.setTimeout(() => {
+              location.assign('/')
+            }, 500)
+          }
+
+        } catch (err) {
+          console.log(err)
+          alert(err.response.data.message)
+        }
+
+      }
+    }
+
+    if (loginForm) {
+
+      $(document).ready(function () {
+        $("#form").validate({
+          rules: {
+            email: {
+              email: true,
+              required: true
+            },
+            password: {
+              minlength: 4
+            }
+          },
+          submitHandler: function (form, e) {
+            e.preventDefault();
+            login();
+          }
+        })
+      })
+
+
+      async function login() {
+
+        console.log('inside login function ')
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        try {
+          const res = await axios({
+            method: 'POST',
+            url: '/login',
+            data: {
+              email,
+              password
+            }
+          })
+          if (res.data.status == 'success') {
+            window.setTimeout(() => {
+              location.assign('/')
+            }, 500)
+          }
+        } catch (err) {
+          document.getElementById('errorMessage').classList.remove('d-none');
+          window.addEventListener('click', el => {
+            document.getElementById('errorMessage').classList.add('d-none');
+          })
+        }
+
+      }
+    }
+
+  </script>
+</body>
+
+</html>
+{{/if}}
